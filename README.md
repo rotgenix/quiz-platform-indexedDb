@@ -21,17 +21,13 @@ Welcome to the **Interactive Quiz Platform**! This is a React-based web applicat
    - Correct and incorrect answers are highlighted for better understanding.
 
 4. **Attempt History**:
-   - All quiz attempts are saved in **localStorage**.
+   - All quiz attempts are saved in **IndexedDB**.
    - Users can view their past attempts on the **History Page**, including:
      - Date and time of the attempt.
      - Score (e.g., `7/10`).
-     - Detailed review of answers (correct/incorrect).
 
 5. **Responsive Design**:
    - The app is fully responsive and works seamlessly on both desktop and mobile devices.
-
-6. **Deployment**:
-   - The app can be easily deployed on platforms like **Vercel** or **Netlify**.
 
 ---
 
@@ -41,7 +37,7 @@ Welcome to the **Interactive Quiz Platform**! This is a React-based web applicat
 - **Routing**: `react-router-dom`
 - **Styling**: Plain CSS (with modern and clean design)
 - **State Management**: React Hooks (`useState`, `useEffect`)
-- **Data Storage**: `localStorage` (for saving quiz attempts)
+- **Data Storage**: `IndexedDb` (for saving quiz attempts)
 
 ---
 
@@ -56,5 +52,6 @@ Follow these steps to run the app on your local machine:
 ### **Steps**
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/quiz-platform.git
-   cd quiz-platform
+   git clone https://github.com/rotgenix/quiz-platform-indexedDb.git
+   cd quiz-platform-indexedDb
+   
