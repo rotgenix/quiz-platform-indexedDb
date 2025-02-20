@@ -1,51 +1,60 @@
-# React + TypeScript + Vite
+# Interactive Quiz Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Interactive Quiz Platform**! This is a React-based web application that allows users to take quizzes, get instant feedback, and review their attempt history. It’s designed to be user-friendly, responsive, and easy to use.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Features**
 
-## Expanding the ESLint configuration
+1. **Quiz Creation & Management**:
+   - Display a list of questions in a quiz format.
+   - Supports both **multiple-choice** and **integer-type** questions.
+   - Questions are fetched from a predefined dataset.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **User Interaction**:
+   - Users can select answers and get **instant feedback**.
+   - A **timer** is implemented for each question (30 seconds per question).
+   - Users can navigate between questions using the **Next** button.
 
-- Configure the top-level `parserOptions` property like this:
+3. **Progress Tracking**:
+   - At the end of the quiz, users can see their **score** and review their answers.
+   - Correct and incorrect answers are highlighted for better understanding.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+4. **Attempt History**:
+   - All quiz attempts are saved in **localStorage**.
+   - Users can view their past attempts on the **History Page**, including:
+     - Date and time of the attempt.
+     - Score (e.g., `7/10`).
+     - Detailed review of answers (correct/incorrect).
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+5. **Responsive Design**:
+   - The app is fully responsive and works seamlessly on both desktop and mobile devices.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+6. **Deployment**:
+   - The app can be easily deployed on platforms like **Vercel** or **Netlify**.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# quiz-platform-indexedDb
+---
+
+## **Technologies Used**
+
+- **Frontend**: React.js
+- **Routing**: `react-router-dom`
+- **Styling**: Plain CSS (with modern and clean design)
+- **State Management**: React Hooks (`useState`, `useEffect`)
+- **Data Storage**: `localStorage` (for saving quiz attempts)
+
+---
+
+## **How to Run the App Locally**
+
+Follow these steps to run the app on your local machine:
+
+### **Prerequisites**
+1. **Node.js** and **npm** installed on your machine.
+   - Download Node.js from [here](https://nodejs.org/).
+
+### **Steps**
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/quiz-platform.git
+   cd quiz-platform
