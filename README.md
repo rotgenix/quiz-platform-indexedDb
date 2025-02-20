@@ -54,4 +54,13 @@ Follow these steps to run the app on your local machine:
    ```bash
    git clone https://github.com/rotgenix/quiz-platform-indexedDb.git
    cd quiz-platform-indexedDb
+2. **Install the Dependencies**:
+   ```bash
+   npm i
+3. **Run the Server**:
+   ```bash
+   npm run dev
+4. Access the App at url:
+   ```bash
+   http://localhost:3000
    
