@@ -62,5 +62,5 @@ Follow these steps to run the app on your local machine:
    npm run dev
 4. Access the App at url:
    ```bash
-   http://localhost:3000
+   http://localhost:5173
    
