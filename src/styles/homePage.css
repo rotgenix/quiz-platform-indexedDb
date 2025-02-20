@@ -1,0 +1,13 @@
+.home-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
