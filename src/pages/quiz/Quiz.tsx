@@ -22,14 +22,16 @@ const Quiz = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (timeLeft === 0) {
-            handleNextQuestion();
-        }
+        if (!quizFinished) {
+            if (timeLeft === 0) {
+                handleNextQuestion();
+            }
 
-        const timer = setInterval(() => {
-            setTimeLeft((prev) => prev - 1);
-        }, 1000);
-        return () => clearInterval(timer);
+            const timer = setInterval(() => {
+                setTimeLeft((prev) => prev - 1);
+            }, 1000);
+            return () => clearInterval(timer);
+        }
     }, [timeLeft]);
 
     const handleNextQuestion = () => {
@@ -46,6 +48,14 @@ const Quiz = () => {
             setTimeLeft(30);
             setUserAnswer("");
         } else {
+            const isCorrect = userAnswer === quizData[currentQuestion].correctAnswer;
+
+            setUserAnswers([
+                ...userAnswers,
+                { questionId: quizData[currentQuestion].id, answer: userAnswer, isCorrect },
+            ]);
+            if (isCorrect) setScore(score + 1);
+            setUserAnswer("");
             setQuizFinished(true);
         }
     };

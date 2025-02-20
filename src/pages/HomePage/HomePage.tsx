@@ -7,7 +7,8 @@ const HomePage = () => {
     return (
         <div className='home-page'>
             <h1 style={{
-                marginBottom: "12px"
+                marginBottom: "12px",
+                textAlign: "center"
             }}>Welcome to the Quiz Platform</h1>
             <div className="home-page-buttons">
                 <button onClick={() => navigate("/quiz")}>Start Quiz</button>
