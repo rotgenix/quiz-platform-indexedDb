@@ -14,7 +14,7 @@ const HistoryPage = () => {
             let storeObject = transaction.objectStore("attempts");
             let allAttmepts = storeObject.getAll();
 
-            allAttmepts.onsuccess = (e) => {
+            allAttmepts.onsuccess = (e: any) => {
                 setAttempts(e?.target?.result);
             }
         }
