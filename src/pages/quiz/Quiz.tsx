@@ -58,7 +58,7 @@ const Quiz = () => {
             let transaction = db.transaction("attempts", "readwrite");
             let storeObject = transaction.objectStore("attempts");
 
-            let request = storeObject.add({
+            storeObject.add({
                 id: new Date().getTime(),
                 attemptNumber: Math.random(),
                 correctAnswers: score
